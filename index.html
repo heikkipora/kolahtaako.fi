@@ -34,10 +34,62 @@
         ul {
             margin: 0;
             padding: 0;
+            list-style-type: none;
         }
 
-        .tickets {
+        .main {
+            width: 752px;
+            margin: 0 auto;
+        }
 
+        .intro {
+            max-width: 752px;
+            margin: 10px 0 60px 0;
+        }
+
+        .intro .header {
+            height: 320px;
+            background-image: url(img/header.jpg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            position: relative;
+        }
+
+        .intro .header h3 {
+            background-color: rgb(124, 16, 51);
+            color: white;
+            padding: 0.15em 0.6em;
+            display: inline-block;
+            font-size: 200%;
+            -ms-transform: rotate(-4deg); /* IE 9 */
+            -webkit-transform: rotate(-4deg); /* Chrome, Safari, Opera */
+            transform: rotate(-4deg);
+            position: absolute;
+            bottom: -50px;
+            left: 50px;
+        }
+
+        .intro .details {
+            background: url(img/header_bg.png) no-repeat;
+            padding: 1em;
+        }
+
+        .intro .details h1 {
+            text-align: center;
+            font-size: 300%;
+            margin: 0;
+        }
+
+        .intro .details .tickets {
+            background-color: rgb(187, 203, 211);
+            padding: 5px 10px;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .intro .details .tickets .price {
+            font-size: 150%;
         }
 
         .movie {
@@ -87,16 +139,20 @@
 </head>
 
 <body>
-    <div class="header">
-        <h1>KOLAHTAAKO elokuvaviikko KOTKASSA</h1>
-        <p>Elokuvat esitetään Kinopalatsissa, Keskuskatu 23 poikkeuksena Charles Chaplin - The Kid (Chaplinin poika).</p>
-        <p class="tickets">LIPUT 5 € / leffa</p>
-        <p>Lippuja voi varata ennakkoon alkaen 1.10. <a href="http://www.kotkanleffat.fi">www.kotkanleffat.fi</a> tai teatterin aukioloaikana <a href="tel:044 517 5557">044 517 5557</a></p>
-        <p>KOLAHTAAKO elokuvaviikon järjestävät Kotka-Kymin seurakuntayhtymä ja Kotkan Kulttuuriasiainkeskus, yhteistyössä Kotkan Leffat Oy</p>
-    </div>
-
     <div class="main">
-        <ul>
+        <div class="intro">
+            <div class="header">
+                <h3>10.-16.10. 2016</h3>
+            </div>
+            <div class="details">
+                <h1>KOLAHTAAKO<br/>elokuvaviikko KOTKASSA</h1>
+                <p class="tickets">LIPUT <span class="price">5</span> € / leffa</p>
+                <p>Elokuvat esitetään <a href="http://kotkanleffat.fi/kinopalatsi">Kinopalatsissa</a>, poikkeuksena Charles Chaplin - The Kid (Chaplinin poika). Lippuja voi varata ennakkoon alkaen 1.10. <a href="http://www.kotkanleffat.fi">www.kotkanleffat.fi</a> tai teatterin aukioloaikana <a href="tel:044 517 5557">044 517 5557</a>.</p>
+                <p>KOLAHTAAKO elokuvaviikon järjestävät Kotka-Kymin seurakuntayhtymä ja Kotkan Kulttuuriasiainkeskus, yhteistyössä Kotkan Leffat Oy</p>
+            </div>
+        </div>
+
+        <ul class="movies">
             <li class="movie">
                 <div class="header" style="background-image: url(img/tulen_morsian.jpg)">
                     <h3>Maanantai 10.10. klo 18.30</h3>
