@@ -38,12 +38,12 @@
         }
 
         .main {
-            width: 752px;
+            max-width: 762px;
+            padding: 5px;
             margin: 0 auto;
         }
 
         .intro {
-            max-width: 752px;
             margin: 10px 0 60px 0;
         }
 
@@ -62,8 +62,8 @@
             padding: 0.15em 0.6em;
             display: inline-block;
             font-size: 200%;
-            -ms-transform: rotate(-4deg); /* IE 9 */
-            -webkit-transform: rotate(-4deg); /* Chrome, Safari, Opera */
+            -ms-transform: rotate(-4deg);
+            -webkit-transform: rotate(-4deg);
             transform: rotate(-4deg);
             position: absolute;
             bottom: -50px;
@@ -146,6 +146,34 @@
             height: 10px;
             display: inline-block;
             margin: 1px 6px 1px 1px;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .intro .header {
+                background-position: left center;
+            }
+
+            .intro .header h3 {
+                bottom: -40px;
+            }
+
+            .movie .header {
+                max-width: 752px;
+                height: 300px;
+            }
+
+            .movie .header h2 {
+                font-size: 300%;
+                margin-top: 1.1em;
+            }
+
+            .movie .header h2.long {
+                font-size: 250%;
+            }
+
+            .movie .header h3 {
+                width: auto;
+            }
         }
 
     </style>
@@ -239,7 +267,7 @@
             <li class="movie">
                 <div class="header" style="background-image: url(img/the_kid.jpg)">
                     <h3>Perjantai 14.10. klo 18.00 ja 20.00</h3>
-                    <h2>The Kid - Chaplinin poika</h2>
+                    <h2 class="long">The Kid - Chaplinin poika</h2>
                     <p class="details">S, USA 1921, 68 min, Ohjaus: Charles Chaplin</p>
                 </div>
                 <p>Kymi Sinfoniettan mykkäelokuvien sarja elävän orkesterin säestyksellä jatkuu Chaplinin ikimuistoisella klassikolla. Monet pitävät tätä tekijänsä ensimmäistä pitkää elokuvaa täydellisimpänä ja omakohtaisimpana filminä, jossa komiikka ja syvältä koskettava draama kietoutuvat toisiinsa täydellisesti nostalgisten kauniiden melodioiden kuljettaessa katsojaa vahvasti tunnelmasta toiseen. - Naurua kyynelten läpi.</p>
@@ -267,7 +295,7 @@
             <li class="movie">
                 <div class="header" style="background-image: url(img/rolli_ja_kaikkien_aikojen_salaisuus.jpg)">
                     <h3>Sunnuntai 16.10. klo 15.00</h3>
-                    <h2>Rölli ja kaikkien aikojen salaisuus</h2>
+                    <h2 class="long">Rölli ja kaikkien aikojen salaisuus</h2>
                     <p class="details">S, Suomi 2016, 80 min, Ohjaus: Taavi Vartia</p>
                 </div>
                 <p>Mistä Rölli ja kumppanit ovat tulleet maailmaan? Vastausta siihen etsitään Röllin uudessa seikkailussa, joka ratkiriemukkaasti sopii niin lapsille kuin lapsenmielisille.</p>
