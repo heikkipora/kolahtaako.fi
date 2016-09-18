@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-SIZE="752x320"
+SIZE="752x368"
 
 function optimize {
   convert "$1" -strip -interlace Plane -sampling-factor 4:2:0 -quality 85% -resize $SIZE^ -gravity center -extent $SIZE "$2"
