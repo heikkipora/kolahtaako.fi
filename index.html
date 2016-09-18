@@ -10,22 +10,79 @@
     <meta name="author" content="Heikki Pora" />
     <meta name="robots" content="index,follow" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
     <link href="//fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet" type="text/css">
     <style type="text/css">
-        html,body {
-            font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
+        /*! normalize.css v4.2.0 | MIT License | github.com/necolas/normalize.css */
+        progress,sub,sup{vertical-align:baseline}button,hr,input{overflow:visible}html{font-family:sans-serif;line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0} figcaption, menu,article,aside,details,figure,footer,header,main,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0} [hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{}button,select{text-transform:none}[type=submit], [type=reset],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:ButtonText dotted 1px}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}
+
+        * {
+            font-family: 'Roboto Condensed', sans-serif;
             -webkit-font-smoothing: antialiased;
             text-rendering: optimizeLegibility;
             -moz-osx-font-smoothing: grayscale;
+            box-sizing: border-box;
         }
+
+        h1, h2, h3, h4, h5, strong {
+            font-weight: 700;
+        }
+
+        p, li {
+            font-weight: 400;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
         .tickets {
 
         }
 
-        .commentator {
+        .movie {
+            max-width: 752px;
+            margin-bottom: 60px;
+        }
+
+        .movie .header {
+            max-width: 752px;
+            height: 320px;
+            text-align: center;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+
+        .movie .header h2 {
+            color: white;
+            text-transform: uppercase;
+            font-size: 400%;
+            text-shadow: black 0 0 5px;
+            margin: 1em 0 0 0;
+        }
+
+        .movie .header h3 {
+            background-color: rgb(124, 16, 51);
+            color: white;
+            width: 15em;
+            margin: -2em 0 1em 0;
+            padding: 0.3em;
+            display: inline-block;
+            font-size: 120%;
+        }
+
+        .movie .header .details {
+            font-weight: 700;
+            color: white;
+            text-shadow: black 0 0 2px;
+            margin: 0;
+        }
+
+        .movie .commentator {
             font-style: italic;
         }
+
     </style>
 </head>
 
@@ -39,77 +96,122 @@
     </div>
 
     <div class="main">
-        <h2>Maanantai 10.10.</h2>
-        klo 18.30
-        TULEN MORSIAN - Suomi 2016, 110 min, K12/9 Ohjaus: Saara Cantell
-        <p>Tositapahtumiin pohjautuva draama unohdetusta kappaleesta Suomen historiaa. Nuorella Annalla on palava halu löytää tosi rakkaus. Sellainen löytyykin naimisissa olevasta Eliaksesta. Intohimo loppuu kuitenkin Eliaksen puolesta lyhyeen, joten Anna tekee ilmiannon: Eliaksen vaimo on noita. Tästä käynnistyy hirmuinen tapahtumasarja vuoden 1666 Ahvenanmaalla.</p>
-        <p class="commentator">Elokuvaviikon avaus: Kolahtaako-toimikunnan puheenjohtaja <strong>Matti Jylhä-Vuorio</strong></p>
-        <p class="commentator">Kommentaattorivieras: seurakuntapastori <strong>Enna Järnstedt</strong></p>
-
-        <h2>Tiistai 11.10.</h2>
-        klo 13.00 TULEN MORSIAN - uusinta
-
-        klo 18.30
-        TEIT MEISTÄ KAUNIIN - Suomi 2016, 110 min, K7/4 Ohjaus: Tuukka Temonen
-        <p>Elokuva Apulanta-yhtyeen syntyajoista, taustanaan Heinolan laman kourissa kamppaileva kaupunki vuonna 1991. Tarina seuraa yhtyeen vaiheita aina ensimmäiseen julkiseen menestys- keikkaansa asti. Elokuva on ohjannut yhtyeen pitkäikäisin basisti, joka myös vierailee esityksessä.</p>
-        <p class="commentator">Kommentaattorivieras: ohjaaja <strong>Tuukka Temonen</strong></p>
-
-        <h2>Keskiviikko 12.10.</h2>
-        klo 13.00 TEIT MEISTÄ KAUNIIN - uusinta
-
-        klo 19.00
-        SPOTLIGHT - USA 2015, 128 min, K12/9 Ohjaus: Tom McCarthy
-        <p>Kaksi Oscaria (paras elokuva ja alkuperäiskäsikirjoitus) voittanut draama Boston Globe -lehden reporttereista, jotka paljastavat yhden meidän päiviemme merkittävimmän rikosvyyhden. Hienosti näytelty draama, joka esittelee tarinansa kiihkottomasti ilman että reporttereista tehdään mitään supersankareita.</p>
-        <p class="commentator">Kommentaattorivieras: toimittaja <strong>Seppo Häkkinen</strong></p>
-
-        <h2>Torstai 13.10.</h2>
-        klo 13.00
-        ROOM - USA 2015, 118 min, K12/9 Ohjaus: Lenny Abrahamson
-        <p>Äiti ja viisivuotias poika ovat olleet vankina jo vuosia ikkunattomassa yhdeksän neliömetrin huoneessa. Aika käy vähiin ja äidin mielessä alkaa itää suunnitelma paosta. Miten heidän käy, kun heidän on lopulta kohdattava uusi pelottava vihollinen: todellinen maailma. Pääosassa Oscarilla parhaasta naispääosasta palkittu Brie Larsson.</p>
-
-        klo 16.00
-        SON OF SAUL - Unkari 2015, 104 min, K16/13 Ohjaus: Laszlo Nemes
-        <p>Vaikuttavassa unkarilaisdraamassa seurataan erään juutalaisvangin vaiheita keskitysleirin kauhuissa. Hiukan kuluneeseen aiheeseen puhaltaa tehokkaasti puhtia subjektiivinen kamera, joka rajaa pääosan hirmuteoista kuva-alan ulkopuolelle, mutta äänet kuuluvat. Oscar-palkinto vuoden parhaana ulkolaisena elokuvana.</p>
-
-        klo 18.00
-        THE BIG SHORT - USA 2015, 130 min, K12/9 Ohjaus: Adam McKay
-        <p>Kun neljä ulkopuolista peluria huomasi markkinoilla merkkejä talouskriisistä, joita monet muut tahot kieltäytyivät näkemästä, syntyi idea kierosta pelistä. Uhkarohkea sijoitus paljastaa heille nykyaikaisen pankkitoiminnan heikon kohdan, eikä mikään ole enää sitä miltä näyttää. Tarina hyytävistä tapahtumista, jotka valitettavasti ovat totta. Oscar-palkinto parhaasta sovitetusta käsikirjoituksesta.</p>
-        <p class="commentator">Kommentaattorivieras: pankinjohtaja <strong>Pentti Leisti</strong></p>
-
-        <h2>Perjantai 14.10.</h2>
-        klo 18.00 ja 20.00 Kotkan konserttitalo
-        THE KID (Chaplinin poika) - USA 1921, 68 min, S
-        Ohjaus: Charles Chaplin
-        <p>Kymi Sinfoniettan mykkäelokuvien sarja elävän orkesterin säestyksellä jatkuu Chaplinin ikimuistoisella klassikolla. Monet pitävät tätä tekijänsä ensimmäistä pitkää elokuvaa täydellisimpänä ja omakohtaisimpana filminä, jossa komiikka ja syvältä koskettava draama kietoutuvat toisiinsa täydellisesti nostalgisten kauniiden melodioiden kuljettaessa katsojaa vahvasti tunnelmasta toiseen. - Naurua kyynelten läpi.</p>
-
-        Lipputiedot etusivulla: www.kymisinfonietta.fi
-
-
-        <h2>Lauantai 15.10.</h2>
-        klo 15.00
-        Lauantai 15.10.
-        BODOM - Suomi 2016, 125 min, K16/13 Ohjaus: Taneli Mustonen
-        <p>Suomalaisittain harvinaisessa kauhuelokuvassa muutama nuori lähtee retkeilemään legendaariselle Bodom-järvelle rekunstruoidakseen tunnetun murhayön tapahtumat. Kuinka ollakaan, järvellä alkaa tapahtua kaikenlaista mystistä ja nuoret joutuvat kamppailemaan hengestään.</p>
-        <p class="commentator">Kommentaattorivieras: kirjailija <strong>Kari Häkämies</strong></p>
-
-        klo 18.30
-        PAHAN KUKAT - Suomi 2016, 105 min, K16/13
-        Ohjaus: Antti J. Jokinen
-        <p>Ajankohtainen, rosoinen ja katujen musiikin tahdittama tarina uusio- perheestä, joka kamppailee lähiölevottomuuksien paineessa. Uhka poreilee pinnan alla koko ajan, kunnes levottomuudet purkautuvat väkivaltaisuuksiin ja mellakoihin - kohtalokkain seurauksin.</p>
-        <p class="commentator">Kommentaattorivieras: teatterikuraattori <strong>Pia Lunkka</strong></p>
-
-        <h2>Sunnuntai 16.10.</h2>
-        klo 15.00
-        RÖLLI JA KAIKKIEN AIKOJEN SALAISUUS
-        Ohjaus: Taavi Vartia - Suomi 2016, 80 min, S
-        <p>Mistä Rölli ja kumppanit ovat tulleet maailmaan? Vastausta siihen etsitään Röllin uudessa seikkailussa, joka ratkiriemukkaasti sopii niin lapsille kuin lapsenmielisille.</p>
-        <p class="commentator">Kommentaattorivieras: ohjaaja <strong>Taavi Vartia</strong></p>
-
-        klo 18.30
-        TYTTÖ NIMELTÄ VARPU - Suomi 2016, 110 min, K12/9 Ohjaus: Selma Vilhunen
-        <p>Vilhusen esikoisnäytelmäelokuva kertoo 12-vuotiaasta Varpusta, joka on jo kovaa vauhtia matkalla kohti aikuisuutta, ja äidistä joka ei halua kasvaa isoksi. Varpu ei ole koskaan tavannut isäänsä, mutta eräänä päivänä hän päättää sen tehdä.</p>
-        <p class="commentator">Kommentaattorivieras: näyttelijä <strong>Antti Luusuaniemi</strong></p>
-
+        <ul>
+            <li class="movie">
+                <div class="header" style="background-image: url(img/tulen_morsian.jpg)">
+                    <h3>Maanantai 10.10. klo 18.30</h3>
+                    <h2>Tulen morsian</h2>
+                    <p class="details">K12/9, Suomi 2016, 110 min, Ohjaus: Saara Cantell</p>
+                </div>
+                <p>Tositapahtumiin pohjautuva draama unohdetusta kappaleesta Suomen historiaa. Nuorella Annalla on palava halu löytää tosi rakkaus. Sellainen löytyykin naimisissa olevasta Eliaksesta. Intohimo loppuu kuitenkin Eliaksen puolesta lyhyeen, joten Anna tekee ilmiannon: Eliaksen vaimo on noita. Tästä käynnistyy hirmuinen tapahtumasarja vuoden 1666 Ahvenanmaalla.</p>
+                <p class="commentator">Elokuvaviikon avaus: Kolahtaako-toimikunnan puheenjohtaja <strong>Matti Jylhä-Vuorio</strong></p>
+                <p class="commentator">Kommentaattorivieras: seurakuntapastori <strong>Enna Järnstedt</strong></p>
+            </li>
+            <li class="movie">
+                <div class="header" style="background-image: url(img/tulen_morsian.jpg)">
+                    <h3>Tiistai 11.10. klo 13.00</h3>
+                    <h2>Tulen morsian</h2>
+                    <p class="details">K12/9, Suomi 2016, 110 min, Ohjaus: Saara Cantell</p>
+                </div>
+                <p>Tositapahtumiin pohjautuva draama unohdetusta kappaleesta Suomen historiaa. Nuorella Annalla on palava halu löytää tosi rakkaus. Sellainen löytyykin naimisissa olevasta Eliaksesta. Intohimo loppuu kuitenkin Eliaksen puolesta lyhyeen, joten Anna tekee ilmiannon: Eliaksen vaimo on noita. Tästä käynnistyy hirmuinen tapahtumasarja vuoden 1666 Ahvenanmaalla.</p>
+            </li>
+            <li class="movie">
+                <div class="header" style="background-image: url(img/teit_meista_kauniin.jpg)">
+                    <h3>Tiistai 11.10. klo 18.30</h3>
+                    <h2>Teit meistä kauniin</h2>
+                    <p class="details">K7/4, Suomi 2016, 110 min, Ohjaus: Tuukka Temonen</p>
+                </div>
+                <p>Elokuva Apulanta-yhtyeen syntyajoista, taustanaan Heinolan laman kourissa kamppaileva kaupunki vuonna 1991. Tarina seuraa yhtyeen vaiheita aina ensimmäiseen julkiseen menestys- keikkaansa asti. Elokuva on ohjannut yhtyeen pitkäikäisin basisti, joka myös vierailee esityksessä.</p>
+                <p class="commentator">Kommentaattorivieras: ohjaaja <strong>Tuukka Temonen</strong></p>
+            </li>
+            <li class="movie">
+                <div class="header" style="background-image: url(img/teit_meista_kauniin.jpg)">
+                    <h3>Keskiviikko 12.10. klo 13.00</h3>
+                    <h2>Teit meistä kauniin</h2>
+                    <p class="details">K7/4, Suomi 2016, 110 min, Ohjaus: Tuukka Temonen</p>
+                </div>
+                <p>Elokuva Apulanta-yhtyeen syntyajoista, taustanaan Heinolan laman kourissa kamppaileva kaupunki vuonna 1991. Tarina seuraa yhtyeen vaiheita aina ensimmäiseen julkiseen menestys- keikkaansa asti. Elokuva on ohjannut yhtyeen pitkäikäisin basisti, joka myös vierailee esityksessä.</p>
+            </li>
+            <li class="movie">
+                <div class="header" style="background-image: url(img/spotlight.jpg)">
+                    <h3>Keskiviikko 12.10. klo 19.00</h3>
+                    <h2>Spotlight</h2>
+                    <p class="details">K12/9, USA 2015, 128 min, Ohjaus: Tom McCarthy</p>
+                </div>
+                <p>Kaksi Oscaria (paras elokuva ja alkuperäiskäsikirjoitus) voittanut draama Boston Globe -lehden reporttereista, jotka paljastavat yhden meidän päiviemme merkittävimmän rikosvyyhden. Hienosti näytelty draama, joka esittelee tarinansa kiihkottomasti ilman että reporttereista tehdään mitään supersankareita.</p>
+                <p class="commentator">Kommentaattorivieras: toimittaja <strong>Seppo Häkkinen</strong></p>
+            </li>
+            <li class="movie">
+                <div class="header" style="background-image: url(img/room.jpg)">
+                    <h3>Torstai 13.10. klo 13.00</h3>
+                    <h2>Room</h2>
+                    <p class="details">K12/9, USA 2015, 118 min, Ohjaus: Lenny Abrahamson</p>
+                </div>
+                <p>Äiti ja viisivuotias poika ovat olleet vankina jo vuosia ikkunattomassa yhdeksän neliömetrin huoneessa. Aika käy vähiin ja äidin mielessä alkaa itää suunnitelma paosta. Miten heidän käy, kun heidän on lopulta kohdattava uusi pelottava vihollinen: todellinen maailma. Pääosassa Oscarilla parhaasta naispääosasta palkittu Brie Larsson.</p>
+            </li>
+            <li class="movie">
+                <div class="header" style="background-image: url(img/son_of_saul.jpg)">
+                    <h3>Torstai 13.10. klo 16.00</h3>
+                    <h2>Son of Saul</h2>
+                    <p class="details">K16/13, Unkari 2015, 104 min, Ohjaus: Laszlo Nemes</p>
+                </div>
+                <p>Vaikuttavassa unkarilaisdraamassa seurataan erään juutalaisvangin vaiheita keskitysleirin kauhuissa. Hiukan kuluneeseen aiheeseen puhaltaa tehokkaasti puhtia subjektiivinen kamera, joka rajaa pääosan hirmuteoista kuva-alan ulkopuolelle, mutta äänet kuuluvat. Oscar-palkinto vuoden parhaana ulkolaisena elokuvana.</p>
+            </li>
+            <li class="movie">
+                <div class="header" style="background-image: url(img/the_big_short.jpg)">
+                    <h3>Torstai 13.10. klo 18.00</h3>
+                    <h2>The big short</h2>
+                    <p class="details">K12/9, USA 2015, 130 min, Ohjaus: Adam McKay</p>
+                </div>
+                <p>Kun neljä ulkopuolista peluria huomasi markkinoilla merkkejä talouskriisistä, joita monet muut tahot kieltäytyivät näkemästä, syntyi idea kierosta pelistä. Uhkarohkea sijoitus paljastaa heille nykyaikaisen pankkitoiminnan heikon kohdan, eikä mikään ole enää sitä miltä näyttää. Tarina hyytävistä tapahtumista, jotka valitettavasti ovat totta. Oscar-palkinto parhaasta sovitetusta käsikirjoituksesta.</p>
+                <p class="commentator">Kommentaattorivieras: pankinjohtaja <strong>Pentti Leisti</strong></p>
+            </li>
+            <li class="movie">
+                <div class="header" style="background-image: url(img/the_kid.jpg)">
+                    <h3>Perjantai 14.10. klo 18.00 ja 20.00</h3>
+                    <h2>The Kid - Chaplinin poika</h2>
+                    <p class="details">S, USA 1921, 68 min, Ohjaus: Charles Chaplin</p>
+                </div>
+                <p>Kymi Sinfoniettan mykkäelokuvien sarja elävän orkesterin säestyksellä jatkuu Chaplinin ikimuistoisella klassikolla. Monet pitävät tätä tekijänsä ensimmäistä pitkää elokuvaa täydellisimpänä ja omakohtaisimpana filminä, jossa komiikka ja syvältä koskettava draama kietoutuvat toisiinsa täydellisesti nostalgisten kauniiden melodioiden kuljettaessa katsojaa vahvasti tunnelmasta toiseen. - Naurua kyynelten läpi.</p>
+                <p>HUOM! Elokuva esitetään Kotkan konserttitalolla. Lipputiedot etusivulla: <a href="http://www.kymisinfonietta.fi">www.kymisinfonietta.fi</a></p>
+            </li>
+            <li class="movie">
+                <div class="header" style="background-image: url(img/bodom.jpg)">
+                    <h3>Lauantai 15.10. klo 15.00</h3>
+                    <h2>Bodom</h2>
+                    <p class="details">K16/13, Suomi 2016, 125 min, Ohjaus: Taneli Mustonen</p>
+                </div>
+                <p>Suomalaisittain harvinaisessa kauhuelokuvassa muutama nuori lähtee retkeilemään legendaariselle Bodom-järvelle rekunstruoidakseen tunnetun murhayön tapahtumat. Kuinka ollakaan, järvellä alkaa tapahtua kaikenlaista mystistä ja nuoret joutuvat kamppailemaan hengestään.</p>
+                <p class="commentator">Kommentaattorivieras: kirjailija <strong>Kari Häkämies</strong></p>
+            </li>
+            <li class="movie">
+                <div class="header" style="background-image: url(img/pahan_kukat.jpg)">
+                    <h3>Lauantai 15.10. klo 18.30</h3>
+                    <h2>Pahan kukat</h2>
+                    <p class="details">K16/13, Suomi 2016, 105 min, Ohjaus: Antti J. Jokinen</p>
+                </div>
+                <p>Ajankohtainen, rosoinen ja katujen musiikin tahdittama tarina uusio- perheestä, joka kamppailee lähiölevottomuuksien paineessa. Uhka poreilee pinnan alla koko ajan, kunnes levottomuudet purkautuvat väkivaltaisuuksiin ja mellakoihin - kohtalokkain seurauksin.</p>
+                <p class="commentator">Kommentaattorivieras: teatterikuraattori <strong>Pia Lunkka</strong></p>
+            </li>
+            <li class="movie">
+                <div class="header" style="background-image: url(img/rolli_ja_kaikkien_aikojen_salaisuus.jpg)">
+                    <h3>Sunnuntai 16.10. klo 15.00</h3>
+                    <h2>Rölli ja kaikkien aikojen salaisuus</h2>
+                    <p class="details">S, Suomi 2016, 80 min, Ohjaus: Taavi Vartia</p>
+                </div>
+                <p>Mistä Rölli ja kumppanit ovat tulleet maailmaan? Vastausta siihen etsitään Röllin uudessa seikkailussa, joka ratkiriemukkaasti sopii niin lapsille kuin lapsenmielisille.</p>
+                <p class="commentator">Kommentaattorivieras: ohjaaja <strong>Taavi Vartia</strong></p>
+            </li>
+            <li class="movie">
+                <div class="header" style="background-image: url(img/tytto_nimelta_varpu.jpg)">
+                    <h3>Sunnuntai 16.10. klo 18.30</h3>
+                    <h2>Tyttö nimeltä varpu</h2>
+                    <p class="details">K12/9, Suomi 2016, 110 min, Ohjaus: Selma Vilhunen</p>
+                </div>
+                <p>Vilhusen esikoisnäytelmäelokuva kertoo 12-vuotiaasta Varpusta, joka on jo kovaa vauhtia matkalla kohti aikuisuutta, ja äidistä joka ei halua kasvaa isoksi. Varpu ei ole koskaan tavannut isäänsä, mutta eräänä päivänä hän päättää sen tehdä.</p>
+                <p class="commentator">Kommentaattorivieras: näyttelijä <strong>Antti Luusuaniemi</strong></p>
+            </li>
+        </ul>
     </div>
 
     <script>
